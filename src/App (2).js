@@ -1,5 +1,5 @@
 import './App.css';
-import {ChangeEncoding} from './net-4-1/ChangeEncoding';
+import {ChangeEncoding} from './Components/ChangeEncoding';
 
 
 function App() {
