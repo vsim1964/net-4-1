@@ -37,11 +37,13 @@ export const ChangeEncoding = () =>  {
 
   const result  = hexToRGB(hex);
 
+  const test = result.includes('NaN') || result.includes('rgb(0,0,0)')
+
   return (
       <div style={bcg}>
         <input type="text" value={hex} id="1" onChange={handler} pattern="/#[a-f0-9]{6}/gi"/>
         {
-           result.includes('NaN') || result.includes('rgb(0,0,0)') ? <input type="text" value="Неверный формат"/>  :  <input type="text" value={hexToRGB(hex)}/>
+           test  ? <input type="text" value="Неверный формат"/>  :  <input type="text" value={hexToRGB(hex)}/>
         }
       </div>
   )
